@@ -6,17 +6,71 @@
   "license": "MIT",
   "dependencies": {
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "babel-eslint": "^7.2.3",
+    "prop-types": "^15.5.10"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.6",
     "@storybook/addon-info": "^3.2.9",
     "@storybook/addon-links": "^3.2.6",
     "@storybook/addon-options": "^3.2.6",
-    "@storybook/react": "^3.2.8"
+    "@storybook/react": "^3.2.8",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-prettier": "^2.4.0",
+    "eslint-config-react-app": "^2.0.0",
+    "eslint-plugin-flowtype": "^2.35.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jest": "^21.0.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-prettier": "^2.2.0",
+    "eslint-plugin-react": "^7.3.0",
+    "prettier": "^1.6.1"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "eslint": "eslint ./",
+    "format": "prettier --trailing-comma all --single-quote --write 'src/**/*.js' '.storybook/*.js'"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": [
+      "react-app",
+      "airbnb",
+      "prettier",
+      "prettier/flowtype",
+      "prettier/react",
+      "plugin:jest/recommended"
+    ],
+    "plugins": [
+      "prettier",
+      "jest"
+    ],
+    "env": {
+      "jest/globals": true
+    },
+    "rules": {
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js"
+          ]
+        }
+      ],
+      "import/no-extraneous-dependencies": 0,
+      "jsx-a11y/no-static-element-interactions": 0,
+      "react/forbid-prop-types": 0,
+      "react/require-default-props": 0,
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "trailingComma": "all"
+        }
+      ]
+    }
   }
 }
