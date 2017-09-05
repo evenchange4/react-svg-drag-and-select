@@ -1,0 +1,22 @@
+{
+  "name": "react-svg-drag-and-select",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Michael Hsu (徐承志) <evenchange4@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.2.6",
+    "@storybook/addon-info": "^3.2.9",
+    "@storybook/addon-links": "^3.2.6",
+    "@storybook/addon-options": "^3.2.6",
+    "@storybook/react": "^3.2.8"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  }
+}
