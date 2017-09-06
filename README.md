@@ -5,7 +5,7 @@
 [![Travis][travis-badge]][travis]
 [![Codecov Status][codecov-badge]][codecov]
 [![Github Tag][githubTag-badge]][githubTag]
-[![node][node]](/)
+[![node][node]]()
 [![npm downloads][npm-downloads]][npm]
 [![npm][npm-badge]][npm]
 
