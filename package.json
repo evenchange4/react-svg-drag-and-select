@@ -1,7 +1,7 @@
 {
   "name": "react-svg-drag-and-select",
   "version": "1.0.1",
-  "description": "A SVG playground to drag and select shape elements",
+  "description": "A SVG playground to drag and select shape elements.",
   "repository": "evenchange4/react-svg-drag-and-select",
   "author": "Michael Hsu <evenchange4@gmail.com>",
   "bugs": {
@@ -15,6 +15,10 @@
     "lib",
     "output"
   ],
+  "engineStrict": true,
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "scripts": {
     "clean": "rm -rf {lib,output,storybook-static}",
     "start": "start-storybook -p 6006",
@@ -48,6 +52,7 @@
     "babel-preset-react-app": "^3.0.2",
     "babel-preset-stage-0": "^6.24.1",
     "bower": "^1.8.0",
+    "codecov": "^2.3.0",
     "eslint": "^4.6.1",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-config-prettier": "^2.4.0",

@@ -3,6 +3,8 @@
 ## [HEAD]
 > Unreleased
 
+* fix(travis): add codecov
+
 ## [v1.0.1]
 > Sep 06, 2017
 
