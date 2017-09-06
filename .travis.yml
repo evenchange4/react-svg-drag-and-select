@@ -1,0 +1,40 @@
+sudo: false
+language: node_js
+node_js:
+  - 8.4.0
+env:
+  global:
+    - YARN_VERSION=0.27.5
+
+before_install:
+  - export PATH="$HOME/.yarn/bin:$PATH"
+  - |
+    if [[ ! -e ~/.yarn/bin/yarn || $(yarn --version) != "${YARN_VERSION}" ]]; then
+      curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version $YARN_VERSION
+    fi
+
+script:
+  - yarn run eslint
+  - yarn run build
+
+after_success:
+  - ./node_modules/.bin/codecov
+
+cache:
+  yarn: true
+  directories:
+    - "~/.yarn"
+    - node_modules
+    - bower_components
+
+deploy:
+  - provider: npm
+    email: evenchange4@gmail.com
+    api_key:
+      secure: kNk0MTZTTfjMCN0fiidV3CtbgrrjhADxysIgNUi6L93H+/YRZQvSqZDlt9ADH2HsPXRgYckS6f+uX94m/RJmJw2AGv9nh+ygkXU8Jkw+qnEdSf1vR5PIpXNn5cnZcQ6848bH8hTrOh4cZCMDEWBD59jHb54EGKphcc3McnRUnVQKRsviBSIwOZL8pCMw9+z4boY5jKxW0xHGPSpHjisUk4Ok7s0Lm2Lb84lF29wPkKFMdA53ZyikBkueSHnC2DssuFLZ3OatbSFl4peXUOWncVp+davtK88i6kNDp1mmRe5McS4bmHneCSemwWmu/erVZ0rSutphxNhZ32hpxOEKCneYWhApiG8+3R701nI1F6bfYyN7y7CtCeA9n6sk2zq1uKlVUnIRTLdpfAuz9xDuJq9VjYD7a3nGjgVazgsqUKgPqkd0CtZmgNLHJemjQz3Z0/zYwUYKtLE0cKajNZrQXAsr24Ldog6Pt4do+Xn6sgPZ0tAeve9orAJCZdJfzQtZ0jxoYASf2ksM/JPDInKC+I8YKQom2QV3aPQKJkBbRDE078A4uBZhsGuSdw/2KW71DbZcwh+CfVP8iWwQEla23Kw4zmvw0V43uUHDBL5pS/lHymnvItdGba8/G43uzIf1zMZ4sgscIQAIq3EjDcULCBSAlv15l9bqykTLRKotz8w=
+    on:
+      repo: evenchange4/micro-github-latest
+      tags: true
+
+notifications:
+  email: evenchange4@gmail.com

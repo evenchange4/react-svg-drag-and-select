@@ -9,8 +9,13 @@ storiesOf('Box', module).add(
     text: 'Box in svg',
     inline: true,
   })(() => (
-    <svg viewbox="0 0 200 200" style={{ border: '1px solid black' }}>
-      <Box x={0} y={0} width={100} height={100} />
+    <svg
+      width={200}
+      height={200}
+      viewBox="0 0 200 200"
+      style={{ border: '1px solid black' }}
+    >
+      <Box x={50} y={50} width={100} height={100} />
     </svg>
   )),
 );

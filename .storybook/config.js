@@ -1,4 +1,4 @@
-import { configure, addDecorator, setAddon } from '@storybook/react';
+import { configure, setAddon } from '@storybook/react';
 import infoAddon, { setDefaults } from '@storybook/addon-info';
 import { setOptions } from '@storybook/addon-options';
 

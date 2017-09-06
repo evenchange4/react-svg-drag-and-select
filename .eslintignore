@@ -1,8 +1,17 @@
 # dependencies
 /node_modules
+/bower_components
 
 # testing
 /coverage
 
 # production
 /build
+/lib
+
+!.storybook
+/storybook-static
+
+# purescript
+/output
+.pulp-cache

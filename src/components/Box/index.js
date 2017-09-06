@@ -1,3 +1,3 @@
-import Box from './Box';
+import Box from './Box.purs';
 
-export default Box;
+export default Box.box;
