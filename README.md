@@ -64,6 +64,7 @@ import SVGContainer from 'react-svg-drag-and-select';
 ```
 $ git clone https://github.com/evenchange4/react-svg-drag-and-select.git
 $ yarn install --pure-lockfile
+$ ./node_modules/.bin/bower install
 
 $ yarn start
 $ yarn run build
