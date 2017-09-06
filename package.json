@@ -17,7 +17,6 @@
   ],
   "scripts": {
     "clean": "rm -rf {lib,output,storybook-static}",
-    "postinstall": "bower install",
     "start": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "prebuild": "npm run clean && npm run build-storybook",
