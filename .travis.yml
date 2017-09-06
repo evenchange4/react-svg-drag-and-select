@@ -12,6 +12,8 @@ before_install:
     if [[ ! -e ~/.yarn/bin/yarn || $(yarn --version) != "${YARN_VERSION}" ]]; then
       curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version $YARN_VERSION
     fi
+  - npm i bower -g
+  - bower install
 
 script:
   - yarn run eslint
@@ -32,6 +34,7 @@ deploy:
     email: evenchange4@gmail.com
     api_key:
       secure: XwoikyeO5sUP2xJHSXl4C62YhPfg4/dV5Gxbnxb9WNxAoW9C+9W7hTYScB2iq1fr7nvF6P0F7yrnWIFqNOk9yNVWVOJzRK/8gr3AgzKyQIj8Gza4d7qGZ3YcooVm8HV/nD7ihNaiy0NJQ19nA5k+7E6qw5QL7F1NLkNIMcQyXyC8LeGfk65qdF3rTDha281PWR2kRjg4RsndnJgIwlAPK6ScTHce+pE0+TRoGcDp0GDgeW1BmTNxhmVUKhFURDIlLlgmmi+xQXkkM+nWjAKrzu2OTIQSs7jASDHi8cGezGQp5YfvBvfgDHA4T7PSqFYZ7qh0wakhONm1qE1SqkLQ6o+PQdiNFNBftKygchN9jFmQWt2i6smFXoSpqwG7h6FIL0EDMsoIm8nM6ua9Gfzly969uQe+ib0aQynET0CM+JIOgLmTq7ZNNi89yEqIi/qCoUTEXjXnqEsmABE6SEGEHy7ds0AzBcQRB/o9pbkAhF605vEpcMBUSq38vzNR1k7PEbGMbBG5PZDRWUXliZqeBOAu/A9sQdNAza9ERg+UMxZZH92EHQNtFAdjT6QbD4N4QMPnioNoEAIs6Oepe1zrWHYAhJz18c0d1CF4gkcisRA5YyyoppnLDnm4gVqdPIamyF39wpjdT14TxvsJYB8IYdqSxQ6z3eoep6zN0b+L52Y=
+    skip_cleanup: true
     on:
       repo: evenchange4/react-svg-drag-and-select
       tags: true

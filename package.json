@@ -17,7 +17,6 @@
   ],
   "scripts": {
     "clean": "rm -rf {lib,output,storybook-static}",
-    "postinstall": "bower install",
     "start": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "prebuild": "npm run clean && npm run build-storybook",
@@ -48,7 +47,6 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react-app": "^3.0.2",
     "babel-preset-stage-0": "^6.24.1",
-    "bower": "^1.8.0",
     "eslint": "^4.6.1",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-config-prettier": "^2.4.0",
