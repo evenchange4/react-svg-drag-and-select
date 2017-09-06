@@ -11,8 +11,8 @@ const context = require.context('../src/', true, /\.example\.js$/);
 
 setAddon(infoAddon);
 setOptions({
-  name: 'MCS Lite',
-  url: 'https://github.com/MCS-Lite/mcs-lite',
+  name: 'React-svg-drag-and-select',
+  url: 'https://github.com/evenchange4/react-svg-drag-and-select',
   goFullScreen: false,
   showLeftPanel: true,
   showDownPanel: false,

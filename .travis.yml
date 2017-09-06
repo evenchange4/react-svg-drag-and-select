@@ -13,6 +13,10 @@ before_install:
       curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version $YARN_VERSION
     fi
 
+install:
+  - yarn install --pure-lockfile
+  - ./node_modules/.bin/bower install
+
 script:
   - yarn run eslint
   - yarn run build
@@ -31,9 +35,10 @@ deploy:
   - provider: npm
     email: evenchange4@gmail.com
     api_key:
-      secure: kNk0MTZTTfjMCN0fiidV3CtbgrrjhADxysIgNUi6L93H+/YRZQvSqZDlt9ADH2HsPXRgYckS6f+uX94m/RJmJw2AGv9nh+ygkXU8Jkw+qnEdSf1vR5PIpXNn5cnZcQ6848bH8hTrOh4cZCMDEWBD59jHb54EGKphcc3McnRUnVQKRsviBSIwOZL8pCMw9+z4boY5jKxW0xHGPSpHjisUk4Ok7s0Lm2Lb84lF29wPkKFMdA53ZyikBkueSHnC2DssuFLZ3OatbSFl4peXUOWncVp+davtK88i6kNDp1mmRe5McS4bmHneCSemwWmu/erVZ0rSutphxNhZ32hpxOEKCneYWhApiG8+3R701nI1F6bfYyN7y7CtCeA9n6sk2zq1uKlVUnIRTLdpfAuz9xDuJq9VjYD7a3nGjgVazgsqUKgPqkd0CtZmgNLHJemjQz3Z0/zYwUYKtLE0cKajNZrQXAsr24Ldog6Pt4do+Xn6sgPZ0tAeve9orAJCZdJfzQtZ0jxoYASf2ksM/JPDInKC+I8YKQom2QV3aPQKJkBbRDE078A4uBZhsGuSdw/2KW71DbZcwh+CfVP8iWwQEla23Kw4zmvw0V43uUHDBL5pS/lHymnvItdGba8/G43uzIf1zMZ4sgscIQAIq3EjDcULCBSAlv15l9bqykTLRKotz8w=
+      secure: XwoikyeO5sUP2xJHSXl4C62YhPfg4/dV5Gxbnxb9WNxAoW9C+9W7hTYScB2iq1fr7nvF6P0F7yrnWIFqNOk9yNVWVOJzRK/8gr3AgzKyQIj8Gza4d7qGZ3YcooVm8HV/nD7ihNaiy0NJQ19nA5k+7E6qw5QL7F1NLkNIMcQyXyC8LeGfk65qdF3rTDha281PWR2kRjg4RsndnJgIwlAPK6ScTHce+pE0+TRoGcDp0GDgeW1BmTNxhmVUKhFURDIlLlgmmi+xQXkkM+nWjAKrzu2OTIQSs7jASDHi8cGezGQp5YfvBvfgDHA4T7PSqFYZ7qh0wakhONm1qE1SqkLQ6o+PQdiNFNBftKygchN9jFmQWt2i6smFXoSpqwG7h6FIL0EDMsoIm8nM6ua9Gfzly969uQe+ib0aQynET0CM+JIOgLmTq7ZNNi89yEqIi/qCoUTEXjXnqEsmABE6SEGEHy7ds0AzBcQRB/o9pbkAhF605vEpcMBUSq38vzNR1k7PEbGMbBG5PZDRWUXliZqeBOAu/A9sQdNAza9ERg+UMxZZH92EHQNtFAdjT6QbD4N4QMPnioNoEAIs6Oepe1zrWHYAhJz18c0d1CF4gkcisRA5YyyoppnLDnm4gVqdPIamyF39wpjdT14TxvsJYB8IYdqSxQ6z3eoep6zN0b+L52Y=
+    skip_cleanup: true
     on:
-      repo: evenchange4/micro-github-latest
+      repo: evenchange4/react-svg-drag-and-select
       tags: true
 
 notifications:
