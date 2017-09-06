@@ -3,7 +3,11 @@
 ## [HEAD]
 > Unreleased
 
+## [v1.0.2]
+> Sep 06, 2017
+
 * fix(travis): add codecov
+* docs(README): update
 
 ## [v1.0.1]
 > Sep 06, 2017
