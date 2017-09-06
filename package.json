@@ -1,6 +1,6 @@
 {
   "name": "react-svg-drag-and-select",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A SVG playground to drag and select shape elements.",
   "repository": "evenchange4/react-svg-drag-and-select",
   "author": "Michael Hsu <evenchange4@gmail.com>",
