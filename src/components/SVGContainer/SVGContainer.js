@@ -5,12 +5,12 @@ import Box from '../Box';
 import ShapeItem from '../ShapeItem';
 
 const INIT_STATE = {
-  left: 0,
-  top: 0,
   x: 0,
   y: 0,
   width: 0,
   height: 0,
+  left: 0,
+  top: 0,
 };
 
 class SVGContainer extends React.PureComponent {
@@ -32,22 +32,28 @@ class SVGContainer extends React.PureComponent {
     if (!nextProps.isSelectable) this.setState(INIT_STATE);
   }
   onMouseDown = e => {
-    const { offsetLeft, offsetTop, x, y } = this.getPositionRelativeToSVG(e);
+    const { left, top } = this.svg.getBoundingClientRect();
+    const { clientX, clientY } = e;
+    const x = clientX - left;
+    const y = clientY - top;
     this.x = x;
     this.y = y;
     this.setState({
-      left: offsetLeft + x,
-      top: offsetTop + y,
       x,
       y,
       width: 0,
       height: 0,
+      left: x + left,
+      top: y + top,
     });
     document.addEventListener('mousemove', this.onMouseMove);
     document.addEventListener('mouseup', this.onMouseUp);
   };
   onMouseMove = e => {
-    const { offsetLeft, offsetTop, x, y } = this.getPositionRelativeToSVG(e);
+    const { left, top } = this.svg.getBoundingClientRect();
+    const { clientX, clientY } = e;
+    const x = clientX - left;
+    const y = clientY - top;
     const nextX = Math.min(x, this.x);
     const nexty = Math.min(y, this.y);
     this.setState({
@@ -55,14 +61,13 @@ class SVGContainer extends React.PureComponent {
       y: nexty,
       width: Math.abs(x - this.x),
       height: Math.abs(y - this.y),
-      left: offsetLeft + nextX,
-      top: offsetTop + nexty,
+      left: nextX + left,
+      top: nexty + top,
     });
   };
   onMouseUp = () => {
     this.x = null;
     this.y = null;
-    // this.setState({ x: null, y: null, width: null, height: null })
     document.removeEventListener('mousemove', this.onMouseMove);
     document.removeEventListener('mouseup', this.onMouseUp);
 
@@ -72,7 +77,6 @@ class SVGContainer extends React.PureComponent {
     const selected = R.filter(item => R.contains(item.id, intersectIds))(
       this.props.items,
     );
-    // console.log(selected)
     this.props.onSelectChange(selected);
   };
 
@@ -106,16 +110,6 @@ class SVGContainer extends React.PureComponent {
   };
   onRef = ref => {
     this.svg = ref;
-  };
-  getPositionRelativeToSVG = e => {
-    const {
-      left: offsetLeft,
-      top: offsetTop,
-    } = this.svg.getBoundingClientRect();
-    const x = e.pageX - offsetLeft;
-    const y = e.pageY - offsetTop;
-
-    return { offsetLeft, offsetTop, x, y };
   };
   render() {
     const {

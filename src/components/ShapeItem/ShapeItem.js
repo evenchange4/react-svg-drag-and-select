@@ -37,11 +37,12 @@ class ShapeItem extends React.PureComponent {
     this.state = { isIntersect: false };
   }
   componentDidMount = () => {
-    // TODO: WHY? for Splunk
+    // TODO: WHY setTimeout? for Splunk
     setTimeout(() => {
       this.updatePosition();
       this.checkIntersect(this.props);
     }, 200);
+    document.addEventListener('scroll', this.updatePosition);
   };
   componentWillReceiveProps = nextProps => {
     if (!R.equals(nextProps.box, this.props.box)) {
@@ -80,7 +81,9 @@ class ShapeItem extends React.PureComponent {
   onRef = ref => {
     this.component = ref;
   };
-
+  componentWillUnMount = () => {
+    document.removeEventListener('scroll', this.updatePosition);
+  };
   updatePosition = () => {
     this.clientRect = this.component.getBoundingClientRect();
   };

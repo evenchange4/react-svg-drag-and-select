@@ -17,7 +17,6 @@ box = createClass $ spec unit \ctx -> do
   props <- getProps ctx
 
   let ui = rect [ style { fill: "rgba(0, 162, 255, 0.2)"
-                        , fillOpacity: "0.25"
                         }
                 , height props.height
                 , width props.width

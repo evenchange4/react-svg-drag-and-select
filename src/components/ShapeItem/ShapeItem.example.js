@@ -21,7 +21,7 @@ storiesOf('ShapeItem', module).add(
       <ShapeItem
         tagName="rect"
         id="id"
-        isMovable="true"
+        isMovable
         onPositionChange={() => {}}
         box={{
           width: 100,
