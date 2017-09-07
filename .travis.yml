@@ -19,8 +19,8 @@ install:
 
 script:
   - yarn run eslint
-  - yarn run test
   - yarn run build
+  - yarn run test
 
 after_success:
   - ./node_modules/.bin/codecov
