@@ -19,6 +19,7 @@ install:
 
 script:
   - yarn run eslint
+  - yarn run test
   - yarn run build
 
 after_success:
