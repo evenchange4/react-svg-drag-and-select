@@ -41,6 +41,7 @@
     "@storybook/addon-info": "^3.2.9",
     "@storybook/addon-links": "^3.2.6",
     "@storybook/addon-options": "^3.2.6",
+    "@storybook/addon-storyshots": "^3.2.8",
     "@storybook/react": "^3.2.8",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^7.2.3",
@@ -53,6 +54,8 @@
     "babel-preset-stage-0": "^6.24.1",
     "bower": "^1.8.0",
     "codecov": "^2.3.0",
+    "enzyme": "^2.9.1",
+    "enzyme-to-json": "^1.5.1",
     "eslint": "^4.6.1",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-config-prettier": "^2.4.0",
@@ -63,9 +66,23 @@
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-prettier": "^2.2.0",
     "eslint-plugin-react": "^7.3.0",
+    "jest": "^21.0.1",
     "prettier": "^1.6.1",
     "purescript": "^0.11.6",
-    "purs-loader": "^3.1.1"
+    "purs-loader": "^3.1.1",
+    "react-test-renderer": "^15.6.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/**/*.test.{js,jsx}",
+      "!src/**/*.example.{js,jsx}"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/lib/",
+      "<rootDir>/output/"
+    ]
   },
   "babel": {
     "presets": [

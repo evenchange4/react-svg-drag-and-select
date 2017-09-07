@@ -1,0 +1,537 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Box API 1`] = `
+<svg
+  height={200}
+  style={
+    Object {
+      "border": "1px solid black",
+    }
+  }
+  viewBox="0 0 200 200"
+  width={200}
+>
+  <Component
+    height={100}
+    width={100}
+    x={50}
+    y={50}
+  >
+    <rect
+      height={100}
+      style={
+        Object {
+          "fill": "rgba(0, 162, 255, 0.2)",
+        }
+      }
+      width={100}
+      x={50}
+      y={50}
+    />
+  </Component>
+</svg>
+`;
+
+exports[`Storyshots SVGContainer API 1`] = `
+<App>
+  <div>
+    <div>
+      <p>
+        Input Data: (JSON Format)
+      </p>
+      <pre
+        style={
+          Object {
+            "fontSize": 12,
+            "lineHeight": "1em",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        [
+  {
+    "id": "1",
+    "tagName": "rect",
+    "value": 1,
+    "x": 0,
+    "y": 0,
+    "width": 200,
+    "height": 50,
+    "fill": "blue",
+    "strokeWidth": 1,
+    "stroke": "rgb(0,0,0)"
+  },
+  {
+    "id": "2",
+    "tagName": "text",
+    "x": 0,
+    "y": 35,
+    "children": "Rect A (value = 1)"
+  },
+  {
+    "id": "3",
+    "tagName": "polygon",
+    "value": 2,
+    "points": "60,20 100,40 100,80 60,100 20,80 20,40",
+    "fill": "red",
+    "strokeWidth": 1,
+    "stroke": "rgb(0,0,0)"
+  },
+  {
+    "id": "4",
+    "tagName": "text",
+    "x": 0,
+    "y": 95,
+    "children": "Polygon B (value = 2)"
+  },
+  {
+    "id": "5",
+    "tagName": "circle",
+    "value": 3,
+    "cx": 50,
+    "cy": 200,
+    "r": 50,
+    "fill": "yellow",
+    "strokeWidth": 1,
+    "stroke": "rgb(0,0,0)"
+  },
+  {
+    "id": "6",
+    "tagName": "text",
+    "x": 50,
+    "y": 235,
+    "children": "Circle C (yellow = 3)"
+  }
+]
+      </pre>
+    </div>
+    <p>
+      SVG Graph:
+    </p>
+    <div>
+      <label
+        htmlFor="Select"
+      >
+        Select:
+      </label>
+      <input
+        checked={true}
+        id="Select"
+        name="Select"
+        onChange={[Function]}
+        type="radio"
+      />
+      <label
+        htmlFor="Move"
+      >
+        Move:
+      </label>
+      <input
+        checked={false}
+        id="Move"
+        name="Move"
+        onChange={[Function]}
+        type="radio"
+      />
+    </div>
+    <SVGContainer
+      height={300}
+      isMovable={false}
+      isSelectable={true}
+      items={
+        Array [
+          Object {
+            "fill": "blue",
+            "height": 50,
+            "id": "1",
+            "stroke": "rgb(0,0,0)",
+            "strokeWidth": 1,
+            "tagName": "rect",
+            "value": 1,
+            "width": 200,
+            "x": 0,
+            "y": 0,
+          },
+          Object {
+            "children": "Rect A (value = 1)",
+            "id": "2",
+            "tagName": "text",
+            "x": 0,
+            "y": 35,
+          },
+          Object {
+            "fill": "red",
+            "id": "3",
+            "points": "60,20 100,40 100,80 60,100 20,80 20,40",
+            "stroke": "rgb(0,0,0)",
+            "strokeWidth": 1,
+            "tagName": "polygon",
+            "value": 2,
+          },
+          Object {
+            "children": "Polygon B (value = 2)",
+            "id": "4",
+            "tagName": "text",
+            "x": 0,
+            "y": 95,
+          },
+          Object {
+            "cx": 50,
+            "cy": 200,
+            "fill": "yellow",
+            "id": "5",
+            "r": 50,
+            "stroke": "rgb(0,0,0)",
+            "strokeWidth": 1,
+            "tagName": "circle",
+            "value": 3,
+          },
+          Object {
+            "children": "Circle C (yellow = 3)",
+            "id": "6",
+            "tagName": "text",
+            "x": 50,
+            "y": 235,
+          },
+        ]
+      }
+      onItemsChange={[Function]}
+      onSelectChange={[Function]}
+      style={
+        Object {
+          "backgroundColor": "aliceblue",
+        }
+      }
+      width={300}
+    >
+      <svg
+        height={300}
+        onMouseDown={[Function]}
+        style={
+          Object {
+            "backgroundColor": "aliceblue",
+            "cursor": "crosshair",
+          }
+        }
+        width={300}
+      >
+        <ShapeItem
+          box={
+            Object {
+              "height": 0,
+              "left": 0,
+              "top": 0,
+              "width": 0,
+            }
+          }
+          fill="blue"
+          height={50}
+          id="1"
+          isMovable={false}
+          onIntersectChange={[Function]}
+          onPositionChange={[Function]}
+          stroke="rgb(0,0,0)"
+          strokeWidth={1}
+          tagName="rect"
+          value={1}
+          width={200}
+          x={0}
+          y={0}
+        >
+          <rect
+            fill="blue"
+            fillOpacity={1}
+            height={50}
+            id="1"
+            onMouseDown={false}
+            stroke="rgb(0,0,0)"
+            strokeWidth={1}
+            style={
+              Object {
+                "cursor": "crosshair",
+                "userSelect": "none",
+              }
+            }
+            value={1}
+            width={200}
+            x={0}
+            y={0}
+          />
+        </ShapeItem>
+        <ShapeItem
+          box={
+            Object {
+              "height": 0,
+              "left": 0,
+              "top": 0,
+              "width": 0,
+            }
+          }
+          id="2"
+          isMovable={false}
+          onIntersectChange={[Function]}
+          onPositionChange={[Function]}
+          tagName="text"
+          x={0}
+          y={35}
+        >
+          <text
+            fillOpacity={1}
+            id="2"
+            onMouseDown={false}
+            style={
+              Object {
+                "cursor": "crosshair",
+                "userSelect": "none",
+              }
+            }
+            x={0}
+            y={35}
+          >
+            Rect A (value = 1)
+          </text>
+        </ShapeItem>
+        <ShapeItem
+          box={
+            Object {
+              "height": 0,
+              "left": 0,
+              "top": 0,
+              "width": 0,
+            }
+          }
+          fill="red"
+          id="3"
+          isMovable={false}
+          onIntersectChange={[Function]}
+          onPositionChange={[Function]}
+          points="60,20 100,40 100,80 60,100 20,80 20,40"
+          stroke="rgb(0,0,0)"
+          strokeWidth={1}
+          tagName="polygon"
+          value={2}
+        >
+          <polygon
+            fill="red"
+            fillOpacity={1}
+            id="3"
+            onMouseDown={false}
+            points="60,20 100,40 100,80 60,100 20,80 20,40"
+            stroke="rgb(0,0,0)"
+            strokeWidth={1}
+            style={
+              Object {
+                "cursor": "crosshair",
+                "userSelect": "none",
+              }
+            }
+            value={2}
+          />
+        </ShapeItem>
+        <ShapeItem
+          box={
+            Object {
+              "height": 0,
+              "left": 0,
+              "top": 0,
+              "width": 0,
+            }
+          }
+          id="4"
+          isMovable={false}
+          onIntersectChange={[Function]}
+          onPositionChange={[Function]}
+          tagName="text"
+          x={0}
+          y={95}
+        >
+          <text
+            fillOpacity={1}
+            id="4"
+            onMouseDown={false}
+            style={
+              Object {
+                "cursor": "crosshair",
+                "userSelect": "none",
+              }
+            }
+            x={0}
+            y={95}
+          >
+            Polygon B (value = 2)
+          </text>
+        </ShapeItem>
+        <ShapeItem
+          box={
+            Object {
+              "height": 0,
+              "left": 0,
+              "top": 0,
+              "width": 0,
+            }
+          }
+          cx={50}
+          cy={200}
+          fill="yellow"
+          id="5"
+          isMovable={false}
+          onIntersectChange={[Function]}
+          onPositionChange={[Function]}
+          r={50}
+          stroke="rgb(0,0,0)"
+          strokeWidth={1}
+          tagName="circle"
+          value={3}
+        >
+          <circle
+            cx={50}
+            cy={200}
+            fill="yellow"
+            fillOpacity={1}
+            id="5"
+            onMouseDown={false}
+            r={50}
+            stroke="rgb(0,0,0)"
+            strokeWidth={1}
+            style={
+              Object {
+                "cursor": "crosshair",
+                "userSelect": "none",
+              }
+            }
+            value={3}
+          />
+        </ShapeItem>
+        <ShapeItem
+          box={
+            Object {
+              "height": 0,
+              "left": 0,
+              "top": 0,
+              "width": 0,
+            }
+          }
+          id="6"
+          isMovable={false}
+          onIntersectChange={[Function]}
+          onPositionChange={[Function]}
+          tagName="text"
+          x={50}
+          y={235}
+        >
+          <text
+            fillOpacity={1}
+            id="6"
+            onMouseDown={false}
+            style={
+              Object {
+                "cursor": "crosshair",
+                "userSelect": "none",
+              }
+            }
+            x={50}
+            y={235}
+          >
+            Circle C (yellow = 3)
+          </text>
+        </ShapeItem>
+        <Component
+          height={0}
+          width={0}
+          x={0}
+          y={0}
+        >
+          <rect
+            height={0}
+            style={
+              Object {
+                "fill": "rgba(0, 162, 255, 0.2)",
+              }
+            }
+            width={0}
+            x={0}
+            y={0}
+          />
+        </Component>
+      </svg>
+    </SVGContainer>
+    <p>
+      Output: (Sum)
+    </p>
+    <h2>
+      0
+    </h2>
+  </div>
+</App>
+`;
+
+exports[`Storyshots ShapeItem API 1`] = `
+<svg
+  height={200}
+  style={
+    Object {
+      "border": "1px solid black",
+    }
+  }
+  viewBox="0 0 200 200"
+  width={200}
+>
+  <Component
+    height={100}
+    width={100}
+    x={50}
+    y={50}
+  >
+    <rect
+      height={100}
+      style={
+        Object {
+          "fill": "rgba(0, 162, 255, 0.2)",
+        }
+      }
+      width={100}
+      x={50}
+      y={50}
+    />
+  </Component>
+  <ShapeItem
+    box={
+      Object {
+        "height": 100,
+        "left": 50,
+        "top": 50,
+        "width": 100,
+      }
+    }
+    fill="brown"
+    height={100}
+    id="id"
+    isMovable={true}
+    onIntersectChange={[Function]}
+    onPositionChange={[Function]}
+    tagName="rect"
+    width={100}
+    x={10}
+    y={10}
+  >
+    <rect
+      fill="brown"
+      fillOpacity={1}
+      height={100}
+      id="id"
+      onMouseDown={[Function]}
+      style={
+        Object {
+          "cursor": "move",
+          "userSelect": "none",
+        }
+      }
+      width={100}
+      x={10}
+      y={10}
+    />
+  </ShapeItem>
+</svg>
+`;
