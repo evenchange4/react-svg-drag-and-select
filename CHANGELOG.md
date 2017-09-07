@@ -3,6 +3,9 @@
 ## [HEAD]
 > Unreleased
 
+## [v1.0.3]
+> Sep 07, 2017
+
 * fix(SVG): should update the position state while scorlling.
 
 ## [v1.0.2]
