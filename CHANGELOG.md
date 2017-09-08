@@ -3,6 +3,8 @@
 ## [HEAD]
 > Unreleased
 
+* chore(yarn): update to 1.0.1
+
 ## [v1.0.3]
 > Sep 07, 2017
 
