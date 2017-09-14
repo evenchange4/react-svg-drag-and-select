@@ -57,12 +57,13 @@ import SVGContainer from 'react-svg-drag-and-select';
 
 ### Requirements
 
--   node >= 8.4.0
+-   node >= 8.5.0
 -   npm >= 5.3.0
--   yarn >= 1.0.1
+-   yarn >= 1.0.2
 
 ```
 $ git clone https://github.com/evenchange4/react-svg-drag-and-select.git
+$ npm install -g purescript pulp bower # For PureScript 
 $ yarn install --pure-lockfile
 $ ./node_modules/.bin/bower install
 

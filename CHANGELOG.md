@@ -3,7 +3,7 @@
 ## [HEAD]
 > Unreleased
 
-* chore(yarn): update to 1.0.1
+* chore(yarn): update to 1.0.2 & node 8.5
 
 ## [v1.0.3]
 > Sep 07, 2017
