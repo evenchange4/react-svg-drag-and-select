@@ -28,51 +28,61 @@
     "test": "NODE_ENV='test' TZ='UTC' jest --coverage --runInBand",
     "test:watch": "npm run test -- --watch",
     "eslint": "eslint ./",
-    "format": "prettier --trailing-comma all --single-quote --write 'src/**/*.js' '.storybook/*.js'"
+    "format": "prettier --write 'src/**/*.js' '.storybook/*.js'"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0 || ^16.0.0"
   },
   "dependencies": {
-    "prop-types": "^15.5.10",
+    "create-react-class": "^15.6.2",
+    "prop-types": "^15.6.0",
     "ramda": "^0.24.1",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.2.6",
-    "@storybook/addon-info": "^3.2.9",
-    "@storybook/addon-links": "^3.2.6",
-    "@storybook/addon-options": "^3.2.6",
-    "@storybook/addon-storyshots": "^3.2.8",
-    "@storybook/react": "^3.2.8",
+    "@storybook/addon-actions": "^3.2.11",
+    "@storybook/addon-info": "^3.2.11",
+    "@storybook/addon-links": "^3.2.10",
+    "@storybook/addon-options": "^3.2.10",
+    "@storybook/addon-storyshots": "^3.2.11",
+    "@storybook/react": "^3.2.11",
     "babel-cli": "^6.26.0",
-    "babel-eslint": "^8.0.0",
+    "babel-eslint": "^8.0.1",
     "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-plugin-import": "^1.4.0",
+    "babel-plugin-import": "^1.5.0",
     "babel-plugin-module-resolver": "v3.0.0-beta.5",
     "babel-plugin-transform-rename-import": "^2.1.1",
     "babel-preset-env": "^1.6.0",
-    "babel-preset-react-app": "^3.0.2",
+    "babel-preset-react-app": "^3.0.3",
     "babel-preset-stage-0": "^6.24.1",
-    "bower": "^1.8.0",
+    "bower": "^1.8.2",
     "codecov": "^2.3.0",
-    "enzyme": "^2.9.1",
-    "enzyme-to-json": "^1.5.1",
-    "eslint": "^4.6.1",
+    "enzyme": "^3.0.0",
+    "enzyme-adapter-react-16": "^1.0.0",
+    "enzyme-to-json": "^3.0.1",
+    "eslint": "^4.7.2",
     "eslint-config-airbnb": "^15.1.0",
-    "eslint-config-prettier": "^2.4.0",
-    "eslint-config-react-app": "^2.0.0",
-    "eslint-plugin-flowtype": "^2.35.1",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-config-react-app": "^2.0.1",
+    "eslint-plugin-flowtype": "^2.36.0",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jest": "^21.1.0",
+    "eslint-plugin-jest": "^21.2.0",
     "eslint-plugin-jsx-a11y": "^5.0.3",
-    "eslint-plugin-prettier": "^2.2.0",
-    "eslint-plugin-react": "^7.3.0",
-    "jest": "^21.1.0",
-    "prettier": "^1.6.1",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-react": "^7.4.0",
+    "jest": "^21.2.1",
+    "prettier": "^1.7.2",
     "purescript": "^0.11.6",
     "purs-loader": "^3.1.1",
-    "react-test-renderer": "^15.6.1"
+    "raf": "^3.3.2",
+    "react-test-renderer": "^16.0.0"
   },
   "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js",
+    "setupFiles": [
+      "raf/polyfill"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "!src/**/*.test.{js,jsx}",
@@ -116,6 +126,10 @@
       ]
     ]
   },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true
+  },
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": [
@@ -146,13 +160,7 @@
       "jsx-a11y/no-static-element-interactions": 0,
       "react/forbid-prop-types": 0,
       "react/require-default-props": 0,
-      "prettier/prettier": [
-        "error",
-        {
-          "singleQuote": true,
-          "trailingComma": "all"
-        }
-      ]
+      "prettier/prettier": "error"
     }
   }
 }

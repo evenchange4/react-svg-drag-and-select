@@ -3,7 +3,9 @@
 ## [HEAD]
 > Unreleased
 
-* chore(yarn): update to 1.0.2 & node 8.5
+* chore(env): use node 8.6.0 & yarn 1.1.0
+* chore(package): ncu update React 16
+* style: update prettier & extract prettier config
 
 ## [v1.0.3]
 > Sep 07, 2017

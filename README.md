@@ -57,9 +57,9 @@ import SVGContainer from 'react-svg-drag-and-select';
 
 ### Requirements
 
--   node >= 8.5.0
+-   node >= 8.6.0
 -   npm >= 5.3.0
--   yarn >= 1.0.2
+-   yarn >= 1.1.0
 
 ```
 $ git clone https://github.com/evenchange4/react-svg-drag-and-select.git
