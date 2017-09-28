@@ -132,7 +132,7 @@ class SVGContainer extends React.PureComponent {
           ...style,
           cursor: isSelectable ? 'crosshair' : 'auto',
         }}
-        onMouseDown={isSelectable && onMouseDown}
+        onMouseDown={isSelectable ? onMouseDown : null}
       >
         {items.map(({ tagName, id, ...others }) => (
           <ShapeItem

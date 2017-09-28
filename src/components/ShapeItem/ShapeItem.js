@@ -85,7 +85,10 @@ class ShapeItem extends React.PureComponent {
     document.removeEventListener('scroll', this.updatePosition);
   };
   updatePosition = () => {
-    this.clientRect = this.component.getBoundingClientRect();
+    this.clientRect =
+      this.component &&
+      this.component.getBoundingClientRect &&
+      this.component.getBoundingClientRect();
   };
   checkIntersect = props => {
     const isIntersect = checkIntersect(
@@ -120,7 +123,7 @@ class ShapeItem extends React.PureComponent {
           userSelect: 'none',
         }}
         fillOpacity={isIntersect ? 0.3 : 1}
-        onMouseDown={isMovable && onMouseDown}
+        onMouseDown={isMovable ? onMouseDown : null}
         {...otherProps}
       />
     );

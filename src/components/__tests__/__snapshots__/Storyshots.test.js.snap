@@ -230,6 +230,7 @@ exports[`Storyshots SVGContainer API 1`] = `
           height={50}
           id="1"
           isMovable={false}
+          key="1"
           onIntersectChange={[Function]}
           onPositionChange={[Function]}
           stroke="rgb(0,0,0)"
@@ -245,7 +246,7 @@ exports[`Storyshots SVGContainer API 1`] = `
             fillOpacity={1}
             height={50}
             id="1"
-            onMouseDown={false}
+            onMouseDown={null}
             stroke="rgb(0,0,0)"
             strokeWidth={1}
             style={
@@ -271,6 +272,7 @@ exports[`Storyshots SVGContainer API 1`] = `
           }
           id="2"
           isMovable={false}
+          key="2"
           onIntersectChange={[Function]}
           onPositionChange={[Function]}
           tagName="text"
@@ -280,7 +282,7 @@ exports[`Storyshots SVGContainer API 1`] = `
           <text
             fillOpacity={1}
             id="2"
-            onMouseDown={false}
+            onMouseDown={null}
             style={
               Object {
                 "cursor": "crosshair",
@@ -305,6 +307,7 @@ exports[`Storyshots SVGContainer API 1`] = `
           fill="red"
           id="3"
           isMovable={false}
+          key="3"
           onIntersectChange={[Function]}
           onPositionChange={[Function]}
           points="60,20 100,40 100,80 60,100 20,80 20,40"
@@ -317,7 +320,7 @@ exports[`Storyshots SVGContainer API 1`] = `
             fill="red"
             fillOpacity={1}
             id="3"
-            onMouseDown={false}
+            onMouseDown={null}
             points="60,20 100,40 100,80 60,100 20,80 20,40"
             stroke="rgb(0,0,0)"
             strokeWidth={1}
@@ -341,6 +344,7 @@ exports[`Storyshots SVGContainer API 1`] = `
           }
           id="4"
           isMovable={false}
+          key="4"
           onIntersectChange={[Function]}
           onPositionChange={[Function]}
           tagName="text"
@@ -350,7 +354,7 @@ exports[`Storyshots SVGContainer API 1`] = `
           <text
             fillOpacity={1}
             id="4"
-            onMouseDown={false}
+            onMouseDown={null}
             style={
               Object {
                 "cursor": "crosshair",
@@ -377,6 +381,7 @@ exports[`Storyshots SVGContainer API 1`] = `
           fill="yellow"
           id="5"
           isMovable={false}
+          key="5"
           onIntersectChange={[Function]}
           onPositionChange={[Function]}
           r={50}
@@ -391,7 +396,7 @@ exports[`Storyshots SVGContainer API 1`] = `
             fill="yellow"
             fillOpacity={1}
             id="5"
-            onMouseDown={false}
+            onMouseDown={null}
             r={50}
             stroke="rgb(0,0,0)"
             strokeWidth={1}
@@ -415,6 +420,7 @@ exports[`Storyshots SVGContainer API 1`] = `
           }
           id="6"
           isMovable={false}
+          key="6"
           onIntersectChange={[Function]}
           onPositionChange={[Function]}
           tagName="text"
@@ -424,7 +430,7 @@ exports[`Storyshots SVGContainer API 1`] = `
           <text
             fillOpacity={1}
             id="6"
-            onMouseDown={false}
+            onMouseDown={null}
             style={
               Object {
                 "cursor": "crosshair",
