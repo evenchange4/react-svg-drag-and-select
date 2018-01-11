@@ -71,7 +71,7 @@
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-react": "^7.4.0",
-    "jest": "^21.2.1",
+    "jest": "^22.0.5",
     "prettier": "^1.7.2",
     "purescript": "^0.11.6",
     "purs-loader": "^3.1.1",
